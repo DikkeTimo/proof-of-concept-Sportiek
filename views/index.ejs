@@ -7,19 +7,21 @@
     <table border="1" cellspacing="0" cellpadding="0">
       <thead>
         <tr>
-          <th>Skigebied</th>
           <th>Dorp</th>
           <th>Accommodatie</th>
           <th>Kamertype</th>
         </tr>
       </thead>
       <tbody>
+        <% const firstId = [...new Set(data.map(dataload => dataload.accomodationId))];
+        firstId.forEach(id => { const rows = data.filter(dataload =>
+        dataload.accomodationId === id); if (rows.length > 0) { %>
         <tr>
           <td></td>
-          <td></td>
-          <td></td>
-          <td></td>
+          <td><%= rows[0].complex_name %></td>
+          <td><%= rows[0].accomodatie_description %></td>
         </tr>
+        <% } }); %>
       </tbody>
     </table>
     <table border="1" cellspacing="0" cellpadding="0">

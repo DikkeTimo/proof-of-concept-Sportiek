@@ -5,7 +5,16 @@ import express from "express";
 const app = express();
 const port = process.env.PORT || 4242;
 // php file from sportiek
-const sportiek = "https://www.sportiek.com/feed/wintersport2.php";
+// const sportiek = "https://www.sportiek.com/feed/wintersport2.php";
+
+const sportiek =
+  "https://raw.githubusercontent.com/DikkeTimo/proof-of-concept-Sportiek/main/json/localjssportiek.json";
+const sportiekone = "https://www.sportiek.com/feed/wintersport1.php";
+
+// const datasportiek = [
+//   [sportiek],
+//   [sportiekone]
+// ]
 
 // const urls = [[sportiek] + "?page=1", [sportiek] + "?page=2", [sportiek] + "?page=3"];
 
@@ -23,8 +32,7 @@ app.get("/", async function (request, response) {
   // const [data1, data2, data3] = await Promise.all(urls.map(fetchJson));
   // const data = { data1: null, data2: null, data3: null };
   fetchJson(sportiek).then((data) => {
-    console.log(data);
-    response.render("index", data);
+    response.render("index", { data: data });
   });
   // response.render("index");
 });
