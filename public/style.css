@@ -18,21 +18,38 @@ main {
   width: 100%;
 }
 
-.left-side-information {
+.information {
   display: flex;
   justify-content: space-between;
   max-width: 100%;
 }
 
 table {
-  width: 100%;
+  width: 40%;
 }
 
 thead {
   width: 50%;
+  height: 70px;
 }
 
 th,
 td {
+  height: 0.5rem;
   padding: 0.2rem;
+  height: 10px;
+  width: 1rem;
+}
+
+
+#green {
+  background-color: rgb(85, 255, 0);
+  width: 30%;
+  height: 10px;
+}
+
+#red {
+  background-color: rgb(255, 0, 0);
+  width: 30%;
+  height: 10px;
 }
