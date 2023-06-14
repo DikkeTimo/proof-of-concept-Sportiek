@@ -1,26 +1,30 @@
 <%- include('./partials/head.ejs') %>
 
-<header></header>
+<header>
+  <img src="./assets/sportieklogo.png" alt="">
+</header>
 
 <main>
   <section class="information">
-    <table id="left" border="1" cellspacing="0" cellpadding="0">
+    <table id="left"  cellspacing="0" cellpadding="0">
       <thead>
         <tr>
           <th>Accommodatie</th>
           <th>Kamertype</th>
           <th>Personen</th>
           <th>Datum</th>
-          
+
         </tr>
       </thead>
       <tbody>
+        <% data1.sort((a, b) => new Date(a.departureDate) - new Date(b.departureDate)); %>
         <% checkdata.forEach(info => { %>
         <tr>
           <td><%= info.complex_name %></td>
           <td><%= info.accomodatie_description %></td>
           <td><%= info.departurePricePersons %></td>
           <td id="datum"><%= info.departureDate %></td>
+        </tr>
       </tbody>
       <% }) %>
     </table>

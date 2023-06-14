@@ -17,7 +17,7 @@ const [data1, data2] = await Promise.all(datasportiek.map(fetchJson));
 const data = { data1, data2 };
 
 const checkdata = data1.filter((item) => {
-  return item.departurePricePersons === 8 || item.departurePricePersons === 12;
+  return item.departurePricePersons === 8 || item.departurePricePersons === 12 || item.departurePricePersons === 6
 });
 
 var accommodations = {};
