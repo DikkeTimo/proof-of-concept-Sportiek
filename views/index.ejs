@@ -19,11 +19,18 @@
           <td><%= info.complex_name %></td>
           <td><%= info.accomodatie_description %></td>
           <td><%= info.departurePricePersons %></td>
-          <td><%= info.departureDate %></td>
+          <td id="datum"><%= info.departureDate %></td>
       </tbody>
       <% }) %>
     </table>
   </section>
+
+  <div class="svg-loader">
+    <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
+      <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
+      <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
+    </svg>
+  </div>
 </main>
 
 <%- include('./partials/foot.ejs') %>

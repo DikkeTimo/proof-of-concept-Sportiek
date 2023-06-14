@@ -6,6 +6,7 @@
 
 body {
   width: 100%;
+  font-size: 12px;
 }
 
 header {
@@ -21,16 +22,12 @@ main {
 .information {
   display: flex;
   justify-content: space-between;
-  max-width: 100%;
+  width: 50%;
 }
 
-table {
-  width: 40%;
-}
 
 thead {
-  width: 50%;
-  height: 70px;
+  height: 50px;
 }
 
 th,
@@ -38,7 +35,10 @@ td {
   height: 0.5rem;
   padding: 0.2rem;
   height: 10px;
-  width: 1rem;
+}
+#datum {
+  color: white;
+  background-color: green;
 }
 
 
@@ -52,4 +52,45 @@ td {
   background-color: rgb(255, 0, 0);
   width: 30%;
   height: 10px;
+}
+
+/* loader */
+
+.svg-loader{
+  display:flex;
+  position: relative;
+  align-content: space-around;
+  justify-content: center;
+}
+.loader-svg{
+  position: absolute;
+  left: 0; right: 0; top: 0; bottom: 0;
+  fill: none;
+  stroke-width: 5px;
+  stroke-linecap: round;
+  stroke: rgb(64, 0, 148);
+}
+.loader-svg.bg{
+  stroke-width: 8px;
+  stroke: rgb(207, 205, 245);
+}
+
+.animate{
+  stroke-dasharray: 242.6;
+  animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+}
+
+@keyframes fill-animation{
+  0%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 0;
+  }
+  50%{
+    stroke-dasharray: 141.3;
+    stroke-dashoffset: 141.3;
+  }
+  100%{
+    stroke-dasharray: 40 242.6;
+    stroke-dashoffset: 282.6;
+  }
 }
