@@ -9,6 +9,8 @@ body {
   font-size: 12px;
 }
 
+/* ------------HEADER-------------- */
+
 header {
   width: 90%;
   margin: 0 auto;
@@ -21,6 +23,10 @@ header {
 header img {
   width: 140px;
 }
+
+/* -------------------------------- */
+
+/* ------------MAIN-------------- */
 
 main {
   width: 100%;
@@ -35,11 +41,13 @@ main {
   font-family: sans-serif;
   width: 90%;
   box-shadow: 0 0 50px rgba(76, 76, 76, 0.581);
+  overflow-x: scroll;
 }
 
 table {
   width: 100%;
   overflow-x: scroll;
+  white-space: nowrap;
 }
 
 table thead tr {
@@ -52,12 +60,9 @@ thead {
   height: 50px;
 }
 
-
 th,
 td {
-  height: 0.5rem;
   padding: 12px 15px;
-  height: 10px;
 }
 #datum {
   color: white;
@@ -76,56 +81,55 @@ tbody td:last-of-type {
   border-bottom: 2px solid #009879;
 }
 
-
-
 #green {
   background-color: rgb(85, 255, 0);
-  width: 30%;
-  height: 10px;
 }
 
 #red {
   background-color: rgb(255, 0, 0);
-  width: 30%;
-  height: 10px;
 }
 
-/* loader */
+/* -------------------------------- */
 
-.svg-loader{
-  display:flex;
+/* -------------LOADER------------- */
+
+.svg-loader {
+  display: flex;
   position: relative;
   align-content: space-around;
   justify-content: center;
 }
-.loader-svg{
+.loader-svg {
   position: absolute;
-  left: 0; right: 0; top: 0; bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
   fill: none;
   stroke-width: 5px;
   stroke-linecap: round;
   stroke: rgb(64, 0, 148);
 }
-.loader-svg.bg{
+.loader-svg.bg {
   stroke-width: 8px;
   stroke: rgb(207, 205, 245);
 }
 
-.animate{
+.animate {
   stroke-dasharray: 242.6;
-  animation: fill-animation 1s cubic-bezier(1,1,1,1) 0s infinite;
+  animation: fill-animation 1s cubic-bezier(1, 1, 1, 1) 0s infinite;
 }
 
-@keyframes fill-animation{
-  0%{
+@keyframes fill-animation {
+  0% {
     stroke-dasharray: 40 242.6;
     stroke-dashoffset: 0;
   }
-  50%{
+  50% {
     stroke-dasharray: 141.3;
     stroke-dashoffset: 141.3;
   }
-  100%{
+  100% {
     stroke-dasharray: 40 242.6;
     stroke-dashoffset: 282.6;
   }

@@ -1,31 +1,50 @@
 <%- include('./partials/head.ejs') %>
 
 <header>
-  <img src="./assets/sportieklogo.png" alt="">
+  <img src="./assets/sportieklogo.png" alt="" />
 </header>
 
 <main>
   <section class="information">
-    <table id="left"  cellspacing="0" cellpadding="0">
+    <table cellspacing="0" cellpadding="0">
       <thead>
         <tr>
           <th>Accommodatie</th>
           <th>Kamertype</th>
           <th>Personen</th>
+          <th>25-11-2023</th>
+          <th>02-12-2023</th>
+          <th>09-12-2023</th>
+          <th>16-12-2023</th>
           <th>23-12-2023</th>
           <th>30-12-2023</th>
           <th>06-01-2024</th>
           <th>13-01-2024</th>
           <th>20-01-2024</th>
+          <th>27-01-2024</th>
+          <th>03-02-2024</th>
+          <th>17-02-2024</th>
+          <th>24-02-2024</th>
+          <th>02-03-2024</th>
+          <th>09-03-2024</th>
+          <th>16-03-2024</th>
+          <th>23-03-2024</th>
+          <th>30-03-2024</th>
+          <th>06-04-2024</th>
+          <th>13-04-2024</th>
+          <th>20-04-2024</th>
+          <th>27-04-2024</th>
         </tr>
       </thead>
       <tbody>
-        <% checkdata.forEach(info => { %>
+        <% filterData.forEach(info => { %>
         <tr>
           <td><%= info.complex_name %></td>
-          <td><%= info.accomodatie_description %></td>
+          <td><%= info.variantName %></td>
           <td><%= info.departurePricePersons %></td>
-          <td id="datum"><%= info.departureDate %></td>
+            <% info.departureDates.forEach((date) => { %>
+              <td><%= date %> </td> 
+            <% }); %>
         </tr>
       </tbody>
       <% }) %>
