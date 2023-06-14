@@ -39,6 +39,7 @@ main {
 
 table {
   width: 100%;
+  overflow-x: scroll;
 }
 
 table thead tr {
