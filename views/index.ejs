@@ -38,16 +38,144 @@
       </thead>
       <tbody>
         <% filterData.forEach(info => { %>
-        <tr>
-          <td><%= info.complex_name %></td>
-          <td><%= info.variantName %></td>
-          <td><%= info.departurePricePersons %></td>
-            <% info.departureDates.forEach((date) => { %>
-              <td><%= date %> </td> 
-            <% }); %>
+          <tr>
+            <td><%= info.complex_name %></td>
+            <td><%= info.variantName %></td>
+            <td><%= info.departurePricePersons %></td>
+            <% if (info.departureDates.includes('25-11-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('02-12-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('09-12-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('16-12-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('23-12-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('30-12-2023')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('06-01-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('13-01-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('20-01-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('27-01-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('03-02-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('17-02-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('24-02-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('02-03-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('09-03-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('16-03-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('23-03-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('30-03-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('06-04-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('13-04-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('20-04-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
+
+            <% if (info.departureDates.includes('27-04-2024')) { %>
+              <td id="green"></td>
+            <% } else { %>
+              <td id="red"></td>
+            <% } %>
         </tr>
+        <% }) %>
       </tbody>
-      <% }) %>
     </table>
   </section>
 

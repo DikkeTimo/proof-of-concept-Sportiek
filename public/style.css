@@ -82,11 +82,15 @@ tbody td:last-of-type {
 }
 
 #green {
-  background-color: rgb(85, 255, 0);
+  background-color: rgb(102, 200, 54);
+  border-radius: 0.6rem;
+  scale: 0.8;
 }
 
 #red {
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(227, 34, 34);
+  border-radius: 0.6rem;
+  scale: 0.8;
 }
 
 /* -------------------------------- */

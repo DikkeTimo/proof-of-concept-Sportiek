@@ -32,6 +32,7 @@ const filterData = data1.reduce((acc, item) => {
     // Voeg een nieuw item toe met de huidige variantName en datum
     acc.push({
       accomodationId: item.accomodationId,
+      departurePricePersons: item.departurePricePersons,
       variantName: item.variantName,
       complex_name: item.complex_name,
       departureDates: [item.departureDate]
@@ -40,6 +41,8 @@ const filterData = data1.reduce((acc, item) => {
 
   return acc;
 }, []);
+
+console.log(filterData)
 
 // Set EJS as the template engine and specify the views directory
 app.set("view engine", "ejs");
