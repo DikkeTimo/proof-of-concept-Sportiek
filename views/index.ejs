@@ -4,14 +4,52 @@
   <img src="./assets/sportieklogo.png" alt="" />
 </header>
 
+<nav>
+  <div class="dropdown" tabindex="0">
+    <button class="dropdown-btn">
+      <span>Accommodatie</span>
+      <span class="arrow"></span>
+    </button>
+    <ul class="dropdown-content">
+      <li>Aquisana</li>
+      <li>Chalet 6 Les Balcons</li>
+      <li>Chalet Altitude</li>
+      <li>Chalet Bouquetin</li>
+      <li>Chalet de Sophie</li>
+      <li>Chalet des Neiges Plein Sud</li>
+      <li>Chalet La Grenouillere &amp; Le Val D'Arvan</li>
+      <li>Chalet Val 2400</li>
+      <li>Chalets Cigales</li>
+      <li>Hermine</li>
+      <li>Kalinda Village</li>
+    </ul>
+  </div>
+</nav>
+
 <main>
   <section class="information">
-    <table cellspacing="0" cellpadding="0">
+    <table id="left" cellspacing="0" cellpadding="0">
       <thead>
         <tr>
           <th>Accommodatie</th>
           <th>Kamertype</th>
           <th>Personen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% filterData.forEach(info => { %>
+        <tr>
+          <td><%= info.complex_name %></td>
+          <td><%= info.variantName %></td>
+          <td><%= info.departurePricePersons %></td>
+        </tr>
+        <% }) %>
+      </tbody>
+    </table>
+
+    <table id="right" cellspacing="0" cellpadding="0">
+      <thead>
+        <tr>
           <th>25-11-2023</th>
           <th>02-12-2023</th>
           <th>09-12-2023</th>
@@ -38,153 +76,130 @@
       </thead>
       <tbody>
         <% filterData.forEach(info => { %>
-          <tr>
-            <td><%= info.complex_name %></td>
-            <td><%= info.variantName %></td>
-            <td><%= info.departurePricePersons %></td>
-            <% if (info.departureDates.includes('25-11-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('02-12-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('09-12-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('16-12-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('23-12-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('30-12-2023')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('06-01-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('13-01-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('20-01-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('27-01-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('03-02-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('17-02-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('24-02-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('02-03-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('09-03-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('16-03-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('23-03-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('30-03-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('06-04-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('13-04-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('20-04-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
-
-            <% if (info.departureDates.includes('27-04-2024')) { %>
-              <td id="green"></td>
-            <% } else { %>
-              <td id="red"></td>
-            <% } %>
+        <tr>
+          <% if (info.departureDates.includes('25-11-2023')) { %> <% const randNum =
+          Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('02-12-2023')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('09-12-2023')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('16-12-2023')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('23-12-2023')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('30-12-2023')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('06-01-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('13-01-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('20-01-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('27-01-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('03-02-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('17-02-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('24-02-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('02-03-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('09-03-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('16-03-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('23-03-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('30-03-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('06-04-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('13-04-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('20-04-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %> <% if (info.departureDates.includes('27-04-2024')) { %> <% const randNum
+          = Math.floor(Math.random() * 10) + 1; %>
+          <td id="green"><%= randNum %></td>
+          <% } else { %>
+          <td id="red"></td>
+          <% } %>
         </tr>
         <% }) %>
       </tbody>
     </table>
   </section>
 
-  <div class="svg-loader">
+  <!-- <div class="svg-loader">
     <svg class="svg-container" height="100" width="100" viewBox="0 0 100 100">
       <circle class="loader-svg bg" cx="50" cy="50" r="45"></circle>
       <circle class="loader-svg animate" cx="50" cy="50" r="45"></circle>
     </svg>
-  </div>
+  </div> -->
 </main>
 
 <%- include('./partials/foot.ejs') %>

@@ -42,7 +42,6 @@ const filterData = data1.reduce((acc, item) => {
   return acc;
 }, []);
 
-console.log(filterData)
 
 // Set EJS as the template engine and specify the views directory
 app.set("view engine", "ejs");
@@ -56,10 +55,6 @@ app.use(express.static("public"));
 
 app.get("/", async function (request, response) {
   response.render("index", { data1: data1, filterData: filterData });
-});
-
-app.get("/overview", async function (request, response) {
-  response.render("overviewpage", { data2: data2, checkdata: checkdata });
 });
 
 app.listen(port, () => {
