@@ -44,9 +44,9 @@ header img {
 
 nav {
   background-color: var(--table-color);
-  border-radius: 0.6rem;
   margin-bottom: 1rem;
   padding: 0.2rem;
+  height: 5rem;
 }
 
 .dropdown {
@@ -133,11 +133,19 @@ nav {
 
 /* --------------MAIN-------------- */
 
-/* main {
+main {
+  /* display: flex;
+  justify-content: space-between;
+  border-collapse: collapse;
+  margin: 0 auto;
+  font-size: 0.9em;
+  box-shadow: 0 0 30px var(--boxshadow);
   width: 100%;
-} */
+  overflow-x: scroll; */
+  width: 100%;
+}
 
-.information {
+.information-data {
   display: flex;
   justify-content: space-between;
   border-collapse: collapse;
@@ -150,6 +158,7 @@ nav {
 
 table {
   white-space: nowrap;
+  width: 100%;
 }
 
 table thead tr {
@@ -180,16 +189,17 @@ tbody td:last-of-type {
   border-bottom: 2px solid var(--table-color);
 }
 
-#right {
+#right-side-table {
+  overflow-x: scroll;
   width: 50%;
 }
 
-#right td {
+#right-side-table td {
   color: white;
   font-size: 16px;
 }
 
-#left {
+#left-side-table {
   width: 50%;
 }
 
