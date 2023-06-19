@@ -2,18 +2,19 @@ import express from "express";
 import { config } from "dotenv";
 config();
 
-const apiKey = process.env.API_URL;
+const apiKey = process.env.API_URL_INFOMARTION;
+const sportiekfeedone = process.env.API_URL_ACCOMMODATIES1;
 
 // Create a new Express app
 const app = express();
 const port = process.env.PORT || 4242;
 
-const sportiek =
-  "https://raw.githubusercontent.com/DikkeTimo/proof-of-concept-Sportiek/main/json/localjsonsportiek.json";
+
 const sportiekone = [apiKey];
+const sportiekfeed1 = [sportiekfeedone]
 
 
-const datasportiek = [[sportiek], [sportiekone]];
+const datasportiek = [[sportiekfeed1], [sportiekone]];
 const [data1, data2] = await Promise.all(datasportiek.map(fetchJson));
 const data = { data1, data2 };
 
