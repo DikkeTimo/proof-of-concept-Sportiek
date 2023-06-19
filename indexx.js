@@ -37,7 +37,8 @@ const filterData = data1.reduce((acc, item) => {
       departurePricePersons: item.departurePricePersons,
       variantName: item.variantName,
       complex_name: item.complex_name,
-      departureDates: [item.departureDate]
+      departureDates: [item.departureDate],
+      number: [item.number]
     });
   }
 

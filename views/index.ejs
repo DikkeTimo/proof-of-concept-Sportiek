@@ -50,7 +50,7 @@
           <% filterData.forEach(info => { %>
             <tr>
               <td><%= info.complex_name %></td>
-              <td></td>
+              <td>  </td>
               <td><%= info.variantName %></td>
               <td><%= info.departurePricePersons %></td>
             </tr>
@@ -90,7 +90,7 @@
         <tr>
           <% if (info.departureDates.includes('25-11-2023')) { %> <% const randNum =
           Math.floor(Math.random() * 10) + 1; %>
-          <td id="green"><%= randNum %></td>
+          <td id="green"><%= info.number %></td>
           <% } else { %>
           <td id="red"></td>
 
