@@ -9,7 +9,7 @@ const app = express();
 const port = process.env.PORT || 4242;
 
 const sportiek =
-  "https://raw.githubusercontent.com/DikkeTimo/proof-of-concept-Sportiek/main/json/localjssportiek.json";
+  "https://raw.githubusercontent.com/DikkeTimo/proof-of-concept-Sportiek/main/json/localjsonsportiek.json";
 const sportiekone = [apiKey];
 
 
