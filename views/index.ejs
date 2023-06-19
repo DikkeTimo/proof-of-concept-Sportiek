@@ -1,7 +1,7 @@
 <%- include('./partials/head.ejs') %>
-
 <header>
   <img src="./assets/sportieklogo.png" alt="" />
+  <h1>Beschikbaarheid </h1>
 </header>
 
 <!-- <div class="dropdown" tabindex="0">
@@ -41,19 +41,21 @@
       <thead>
         <tr>
           <th>Accommodatie</th>
+          <th>Dorp</th>
           <th>Kamertype</th>
           <th>Personen</th>
         </tr>
       </thead>
       <tbody>
-        <% filterData.forEach(info => { %>
-        <tr>
-          <td><%= info.complex_name %></td>
-          <td><%= info.variantName %></td>
-          <td><%= info.departurePricePersons %></td>
-        </tr>
-        <% }) %>
-      </tbody>
+          <% filterData.forEach(info => { %>
+            <tr>
+              <td><%= info.complex_name %></td>
+              <td></td>
+              <td><%= info.variantName %></td>
+              <td><%= info.departurePricePersons %></td>
+            </tr>
+          <% }) %>
+        </tbody>
     </table>
 
     <table id="right-side-table" cellspacing="0" cellpadding="0">

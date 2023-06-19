@@ -5,6 +5,7 @@
 }
 
 :root {
+  --color-main: #ff6600;
   --color-non-av: #e32222;
   --color-av: #66c836;
   --boxshadow: #4c4c4c94;
@@ -16,17 +17,18 @@
   --border: #dddddd;
 }
 
-
 body {
   width: 100%;
   font-size: 10px;
-  font-family: 'Golos Text', sans-serif;
+  font-family: "Golos Text", sans-serif;
   font-weight: 400;
 }
 
 /* ------------HEADER-------------- */
 
 header {
+  display: flex;
+  align-items: center;
   width: 100%;
   margin: 0 auto;
   padding: 5px;
@@ -36,6 +38,11 @@ header {
 
 header img {
   width: 140px;
+}
+
+header h1 {
+  color: var(--color-main);
+  margin-left: 50%;
 }
 
 /* -------------------------------- */
@@ -110,7 +117,7 @@ nav {
 
 .dropdown-btn:focus-within + .dropdown-content {
   visibility: visible;
-} 
+}
 
 .dropdown-btn:focus-within > .arrow {
   transform: rotate(180deg);
@@ -128,37 +135,22 @@ nav {
   left: 0;
 }
 
-
 /* -------------------------------- */
 
 /* --------------MAIN-------------- */
 
 main {
-  /* display: flex;
-  justify-content: space-between;
-  border-collapse: collapse;
-  margin: 0 auto;
-  font-size: 0.9em;
-  box-shadow: 0 0 30px var(--boxshadow);
-  width: 100%;
-  overflow-x: scroll; */
   width: 100%;
 }
 
 .information-data {
   display: flex;
   justify-content: space-between;
-  border-collapse: collapse;
   margin: 0 auto;
-  font-size: 0.9em;
+  /* font-size: 0.9em; */
   box-shadow: 0 0 30px var(--boxshadow);
-  width: 100%;
-  overflow-x: scroll;
-}
-
-table {
   white-space: nowrap;
-  width: 100%;
+  overflow-x: scroll;
 }
 
 table thead tr {
@@ -167,13 +159,9 @@ table thead tr {
   text-align: center;
 }
 
-thead {
-  height: 50px;
-}
-
 th,
 td {
-  padding: 12px 15px;
+  padding: 10px 10px;
 }
 
 tbody td {
@@ -189,30 +177,21 @@ tbody td:last-of-type {
   border-bottom: 2px solid var(--table-color);
 }
 
-#right-side-table {
-  overflow-x: scroll;
-  width: 50%;
-}
-
 #right-side-table td {
   color: white;
   font-size: 16px;
 }
 
-#left-side-table {
-  width: 50%;
-}
-
 #green {
   background-color: var(--color-av);
   border-radius: 0.6rem;
-  scale: 0.8;
+  scale: 0.7;
 }
 
 #red {
   background-color: var(--color-non-av);
   border-radius: 0.6rem;
-  scale: 0.8;
+  scale: 0.7;
 }
 
 /* -------------------------------- */

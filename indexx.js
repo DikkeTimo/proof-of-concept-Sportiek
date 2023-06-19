@@ -12,7 +12,6 @@ const sportiek =
   "https://raw.githubusercontent.com/DikkeTimo/proof-of-concept-Sportiek/main/json/localjssportiek.json";
 const sportiekone = [apiKey];
 
-console.log(sportiekone)
 
 const datasportiek = [[sportiek], [sportiekone]];
 const [data1, data2] = await Promise.all(datasportiek.map(fetchJson));
@@ -57,8 +56,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", async function (request, response) {
-  response.render("index", { data1: data1, filterData: filterData, data: data });
-  console.log(filterData)
+  response.render("index", { data1: data1, data2: data2, filterData: filterData, data: data });
 });
 
 
