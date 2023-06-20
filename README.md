@@ -42,12 +42,22 @@ Dit project is gemaakt met NodeJS, EJS en CSS. Verder staat hieronder nog een ko
 1. Clone of download deze repository
 2. Ga naar de root directory van het project.
 3. Gebruik ``npm install`` express en ejs om de gebruikte dev dependencies en packages te installeren.
-4. Gebruik de ``terminal`` met ``npm start`` om een webserver te maken op poort 4242
+4. Gebruik de ``terminal`` ``npm start`` om een webserver te maken op poort 4242
 
 ## 🔨 Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
+De applicatie is lokaal te gebruiken voor de eindgebruiker, dat is in dit geval sportiek reizen. Aan de hand van twee tabellen kan je snel wat de beschikbaarheid is van de accommodaties. 
+
+De userstory: snel de beschikbaarheid checken voor klanten die bellen.
+
 ## 📖 Bronnen
+
+- [NodeJS](https://nodejs.org/en/)
+- [EJS] (https://ejs.co/)
+- [MDN] (https://developer.mozilla.org/en-US/)
+- [YouTube] (https://www.youtube.com/)
+
 
 ## 🔓 Licentie
 
