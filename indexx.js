@@ -46,21 +46,33 @@ const filterData = combinedData.reduce((acc, item) => {
   return acc;
 }, []);
 
+console.log(filterData)
 
 
-// const Id = []
-// filterData.forEach(item => {
-//   Id.push(item.accomodationId);
-// })
+// Compare accommodations
+const comparedAccommodations = [];
+data1.forEach(accommodation1 => {
+  filterData.forEach(accommodation2 => {
+    if (accommodation1.accomodationId === String(accommodation2.accomodationId)) {
+      // Extract the common information
+      const dorp = accommodation1.dorp
+      const skigebied = accommodation1.skigebied
 
-// const dorp = []
-// data1.forEach(item => {
-//   dorp.push(item.accomodationId)
-//   dorp.push(item.dorp)
-// })
+      // Add compared accommodation to the list
+      comparedAccommodations.push({
+        accommodationId: accommodation1.accomodationId,
+        skigebied,
+        dorp
+      });
+    }
+  });
+});
 
-// console.log(Id)
-// console.log(dorp)
+console.log(comparedAccommodations)
+
+
+
+
 
 
 
@@ -75,10 +87,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", async function (request, response) {
-  response.render("index", { filterData, data1, data2, data3 ,data4 });
+  response.render("index", { filterData, data1, data2, data3 ,data4, comparedAccommodations });
 });
-
-// { data1: data1, data2: data2, filterData: filterData, data: data }
 
 app.listen(port, () => {
   console.log("listening on http://localhost:" + port);
@@ -90,24 +100,3 @@ async function fetchJson(urls) {
     .then((response) => response.json())
     .catch((error) => error);
 }
-
-
-
-
-
-// const datasportiek = [[sportiekfeed1], [sportiekone]];
-// const [data1, data2] = await Promise.all(datasportiek.map(fetchJson));
-// const data = { data1, data2 };
-
-
-// const checkdata = data1.filter((item) => {
-//   return item.numberOfBeds === item.departurePricePersons
-// });
-
-
-// functies
-// const dorp = [];
-// data1.forEach(item => {
-//   dorp.push(item.dorp);
-//   dorp.push(item.accomodationId)
-// });

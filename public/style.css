@@ -8,6 +8,7 @@
   --color-main: #ff6600;
   --color-non-av: #e32222;
   --color-av: #66c836;
+  --color-even: #e4e3e3;
   --boxshadow: #4c4c4c94;
 
   --table-color: #009879;
@@ -50,10 +51,17 @@ header h1 {
 /* --------------NAV--------------- */
 
 nav {
+  display: flex;
+  align-items: center;
   background-color: var(--table-color);
   margin-bottom: 1rem;
   padding: 0.2rem;
   height: 5rem;
+}
+
+nav label {
+  font-size: larger;
+  color: #fff;
 }
 
 .dropdown {
@@ -139,20 +147,6 @@ nav {
 
 /* --------------MAIN-------------- */
 
-main {
-  width: 100%;
-}
-
-/* .information-data {
-  display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-  box-shadow: 0 0 30px var(--boxshadow);
-  white-space: nowrap;
-  max-width: 100%;
-} */
-
-
 .table-wrapper {
   display: flex;
   box-shadow: 0 0 30px var(--boxshadow);
@@ -162,11 +156,19 @@ main {
   width: 99%;
 }
 
+
 .right-side{
   overflow-x: scroll;
 }
 
+
+#right-side-table td {
+color: white;
+}
+
+
 table thead tr {
+  border-radius: 10px;
   background-color: var(--table-color); 
   color: var(--light-text);
   text-align: center;
@@ -183,16 +185,14 @@ tbody td {
 }
 
 tbody td:nth-of-type(even) {
-  background-color: #f3f3f3;
+  background-color: var(--color-even);
 }
 
-tbody td:last-of-type {
+tbody td:last-of-type,
+thead th:last-of-type {
   border-bottom: 1px solid var(--table-color);
 }
 
-#right-side-table td {
-  color: white;
-}
 
 #green {
   background-color: var(--color-av);
