@@ -13,20 +13,35 @@ Voor Sportiek reizen heb ik website gemaakt waar de eindgebruiker snel kan zien 
 <img src="./public/assets/studio.png">
 
 ## Inhoudsopgave
-  * [Gebruik](#gebruik)
   * [Kenmerken](#kenmerken)
   * [Installatie](#installatie)
+  * [Gebruik](#gebruik)
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Gebruik
-<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
-## Kenmerken
+## ⚡ Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
 
-## Installatie
+Dit project is gemaakt met NodeJS, EJS en CSS. Verder staat hieronder nog een korte lijst met gebruikte tools en middelen.
+
+**Tools**
+
+- 🖥️ VSCode
+- ✍ Pen & Papier
+- 🖼 Figma
+
+**Gebruikte technieken**
+
+- 📟 NodeJS
+- 🚀 EJS
+- 💅 CSS
+
+## 📥 Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+
+## 🔨 Gebruik
+<!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
 ## Bronnen
 
