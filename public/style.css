@@ -18,7 +18,7 @@
 }
 
 body {
-  width: 100%;
+  max-width: 100%;
   font-size: 10px;
   font-family: "Golos Text", sans-serif;
   font-weight: 400;
@@ -143,25 +143,38 @@ main {
   width: 100%;
 }
 
-.information-data {
+/* .information-data {
   display: flex;
   justify-content: space-between;
   margin: 0 auto;
-  /* font-size: 0.9em; */
   box-shadow: 0 0 30px var(--boxshadow);
   white-space: nowrap;
+  max-width: 100%;
+} */
+
+
+.table-wrapper {
+  display: flex;
+  box-shadow: 0 0 30px var(--boxshadow);
+  border-radius: 0.6rem;
+  white-space: nowrap;
+  margin: 0 auto;
+  width: 99%;
+}
+
+.right-side{
   overflow-x: scroll;
 }
 
 table thead tr {
-  background-color: var(--table-color);
+  background-color: var(--table-color); 
   color: var(--light-text);
   text-align: center;
 }
 
 th,
 td {
-  padding: 10px 10px;
+  padding: 15px 10px;
 }
 
 tbody td {
@@ -174,24 +187,23 @@ tbody td:nth-of-type(even) {
 }
 
 tbody td:last-of-type {
-  border-bottom: 2px solid var(--table-color);
+  border-bottom: 1px solid var(--table-color);
 }
 
 #right-side-table td {
   color: white;
-  font-size: 16px;
 }
 
 #green {
   background-color: var(--color-av);
   border-radius: 0.6rem;
-  scale: 0.7;
+  scale: 0.9;
 }
 
 #red {
   background-color: var(--color-non-av);
   border-radius: 0.6rem;
-  scale: 0.7;
+  scale: 0.9;
 }
 
 /* -------------------------------- */
