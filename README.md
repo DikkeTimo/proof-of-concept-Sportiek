@@ -3,15 +3,6 @@
 # Dashboard Beschikbaarheid Sportiek Reizen
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 
-## Inhoudsopgave
-
-  * [Beschrijving](#beschrijving)
-  * [Gebruik](#gebruik)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Bronnen](#bronnen)
-  * [Licentie](#licentie)
-
 ## Beschrijving
 <!-- Bij Beschrijving staat kort beschreven wat voor project het is en wat je hebt gemaakt -->
 <!-- Voeg een mooie poster visual toe 📸 -->
@@ -20,6 +11,13 @@
 Voor Sportiek reizen heb ik website gemaakt waar de eindgebruiker snel kan zien welke accommodaties beschikbaar zijn en welke niet, de gebruikte informatie komt uit een database.
 
 <img src="./public/assets/studio.png">
+
+## Inhoudsopgave
+  * [Gebruik](#gebruik)
+  * [Kenmerken](#kenmerken)
+  * [Installatie](#installatie)
+  * [Bronnen](#bronnen)
+  * [Licentie](#licentie)
 
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
