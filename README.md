@@ -10,7 +10,7 @@
 
 Voor Sportiek reizen heb ik website gemaakt waar de eindgebruiker snel kan zien welke accommodaties beschikbaar zijn en welke niet, de gebruikte informatie komt uit een database.
 
-<img src="./public/assets/studio.png">
+<img src="./public/assets/mac.png">
 
 ## Inhoudsopgave
   * [Kenmerken](#kenmerken)
