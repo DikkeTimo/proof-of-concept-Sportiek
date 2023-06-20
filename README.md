@@ -54,9 +54,9 @@ De userstory: snel de beschikbaarheid checken voor klanten die bellen.
 ## 📖 Bronnen
 
 - [NodeJS](https://nodejs.org/en/)
-- [EJS] (https://ejs.co/)
-- [MDN] (https://developer.mozilla.org/en-US/)
-- [YouTube] (https://www.youtube.com/)
+- [EJS](https://ejs.co/)
+- [MDN](https://developer.mozilla.org/en-US/)
+- [YouTube](https://www.youtube.com/)
 
 
 ## 🔓 Licentie
