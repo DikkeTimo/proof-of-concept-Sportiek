@@ -39,12 +39,16 @@ Dit project is gemaakt met NodeJS, EJS en CSS. Verder staat hieronder nog een ko
 
 ## 📥 Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+1. Clone of download deze repository
+2. Ga naar de root directory van het project.
+3. Gebruik npm install express en ejs om de gebruikte dev dependencies en packages te installeren.
+4. Gebruik de terminal met npm start om een webserver te maken op poort 4242
 
 ## 🔨 Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
 
-## Bronnen
+## 📖 Bronnen
 
-## Licentie
+## 🔓 Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
