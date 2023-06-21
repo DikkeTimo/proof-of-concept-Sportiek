@@ -9,7 +9,7 @@
   --color-non-av: #e32222;
   --color-av: #66c836;
   --color-even: #e4e3e3;
-  --color-h1: #1356AE;
+  --color-h1: #1356ae;
   --boxshadow: #4c4c4c94;
 
   --table-color: #009879;
@@ -170,19 +170,17 @@ nav label {
   width: 97%;
 }
 
-.right-side{
+.right-side {
   overflow-x: scroll;
 }
 
-
 #right-side-table td {
-color: white;
+  color: white;
 }
-
 
 table thead tr {
   border-radius: 10px;
-  background-color: var(--table-color); 
+  background-color: var(--table-color);
   color: var(--light-text);
   text-align: center;
 }
@@ -205,7 +203,6 @@ tbody td:last-of-type,
 thead th:last-of-type {
   border-bottom: 1px solid var(--table-color);
 }
-
 
 #green {
   background-color: var(--color-av);

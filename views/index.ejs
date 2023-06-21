@@ -47,21 +47,19 @@
         <table id="left-side-table" cellspacing="0" cellpadding="0">
           <thead>
             <tr>
+              <th>Skigebied</th>
               <th>Accommodatie</th>
               <th>Dorp</th>
-              <th>Skigebied</th>
               <th>Kamertype</th>
-              <th>Personen</th>
             </tr>
           </thead>
           <tbody>
             <% filterData.forEach(info => { %>
               <tr>
+                  <td><%= info.skigebied %></td>
                   <td><%= info.complex_name %></td>
                   <td><%= info.dorp %></td>
-                  <td><%= info.skigebied %></td>
                   <td><%= info.variantName %></td>
-                  <td><%= info.departurePricePersons %></td>
               </tr>
             <% }) %>
           </tbody>
