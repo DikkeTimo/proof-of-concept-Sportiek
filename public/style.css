@@ -9,6 +9,7 @@
   --color-non-av: #e32222;
   --color-av: #66c836;
   --color-even: #e4e3e3;
+  --color-h1: #1356AE;
   --boxshadow: #4c4c4c94;
 
   --table-color: #009879;
@@ -16,6 +17,7 @@
   --dark-text: #000;
 
   --border: #dddddd;
+  --borderradius: 0.6rem;
 }
 
 body {
@@ -30,7 +32,7 @@ body {
 header {
   display: flex;
   align-items: center;
-  width: 100%;
+  width: 97%;
   margin: 0 auto;
   padding: 5px;
   height: 6rem;
@@ -43,8 +45,12 @@ header img {
 
 header h1 {
   font-size: xx-large;
-  color: var(--table-color);
+  color: var(--color-h1);
   margin-left: 50%;
+}
+
+.title {
+  margin: 0 auto;
 }
 
 /* -------------------------------- */
@@ -55,9 +61,9 @@ nav {
   display: flex;
   align-items: center;
   background-color: var(--table-color);
-  border-radius: 0.6rem;
+  border-radius: var(--borderradius);
   height: 5rem;
-  width: 99%;
+  width: 97%;
   margin: 0 auto;
   margin-bottom: 1rem;
 }
@@ -161,7 +167,7 @@ nav label {
   border-radius: 0.6rem;
   white-space: nowrap;
   margin: 0 auto;
-  width: 99%;
+  width: 97%;
 }
 
 .right-side{
@@ -203,13 +209,13 @@ thead th:last-of-type {
 
 #green {
   background-color: var(--color-av);
-  border-radius: 0.6rem;
+  border-radius: var(--borderradius);
   scale: 0.9;
 }
 
 #red {
   background-color: var(--color-non-av);
-  border-radius: 0.6rem;
+  border-radius: var(--borderradius);
   scale: 0.9;
 }
 

@@ -1,8 +1,12 @@
 <%- include('./partials/head.ejs') %>
 
 <header>
-  <img src="./assets/sportieklogo.png" alt="" />
-  <h1>Beschikbaarheid</h1>
+  <a href="/">
+    <img src="./assets/sportieklogo.png" alt="" />
+  </a>
+  <div class="title">
+    <h1>Beschikbaarheid</h1>
+  </div>
 </header>
 
 <!-- <div class="dropdown" tabindex="0">
@@ -27,7 +31,8 @@
 
 <nav>
   <div class="filter">
-    <label for="accommodatie">Accommodatie:</label>
+    <label for="accommodatie">Accommodatie:
+    </label>
     <select onchange="location.href=this.value;">
       <% complexnamen.forEach(complex => { %>
         <option value="?filter=complex_name&value=<%= complex %>"><%= complex %></option>
