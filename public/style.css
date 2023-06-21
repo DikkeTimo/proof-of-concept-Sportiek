@@ -42,7 +42,8 @@ header img {
 }
 
 header h1 {
-  color: var(--color-main);
+  font-size: xx-large;
+  color: var(--table-color);
   margin-left: 50%;
 }
 
