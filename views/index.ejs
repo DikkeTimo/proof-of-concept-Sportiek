@@ -27,29 +27,12 @@
 
 <nav>
   <div class="filter">
-    <form action="">
-      <label for="pet-select">Accommodatie:</label>
-      <select name="complex" id="complex-select">
-        <% filterData.forEach(accommodation => { %>
-        <option value="<%= accommodation.complex_name %>">
-          <%= accommodation.complex_name %>
-        </option>
-        <% }) %>
-      </select>
-    </form>
-
-    <form action="">
-      <label for="pet-select">Dorp:</label>
-      <select name="dorp" id="dorp-select">
-        <% comparedAccommodations.forEach(dorp=> { %>
-        <option value="<%= dorp.dorp %>">
-          <%= dorp.dorp %>
-        </option>
-        <% }) %>
-      </select>
-    </form>
-
-
+    <label for="accommodatie">Accommodatie:</label>
+    <select onchange="location.href=this.value;">
+      <% complexnamen.forEach(complex => { %>
+        <option value="?filter=complex_name&value=<%= complex %>"><%= complex %></option>
+      <% }) %>
+    </select>
   </div>
 </nav>
 
@@ -61,6 +44,7 @@
             <tr>
               <th>Accommodatie</th>
               <th>Dorp</th>
+              <th>Skigebied</th>
               <th>Kamertype</th>
               <th>Personen</th>
             </tr>
@@ -69,7 +53,8 @@
             <% filterData.forEach(info => { %>
               <tr>
                   <td><%= info.complex_name %></td>
-                  <td></td>
+                  <td><%= info.dorp %></td>
+                  <td><%= info.skigebied %></td>
                   <td><%= info.variantName %></td>
                   <td><%= info.departurePricePersons %></td>
               </tr>
@@ -104,12 +89,12 @@
               <th>13-04-2024</th>
               <th>20-04-2024</th>
               <th>27-04-2024</th>
+              <th>Other</th>
             </tr>
           </thead>
           <tbody>
             <% filterData.forEach(info => { %>
             <tr>
-
               <% if (info.departureDates.includes('25-11-2023')) { %>
               <td id="green"><%= info.number %></td>
               <% } else { %>

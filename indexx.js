@@ -23,6 +23,14 @@ const urls = [sportiekone, sportiekfeed1, sportiekfeed2, sportiekfeed3];
 const [data1, data2, data3, data4] = await Promise.all(urls.map(fetchJson));
 const combinedData = [...data2, ...data3, ...data4];
 
+const dorpen = {}
+const skigebieden = {}
+
+data1.forEach(accomodation => {
+  dorpen[accomodation.accomodationId] = accomodation.dorp
+  skigebieden[accomodation.accomodationId] = accomodation.skigebied
+})
+
 const filterData = combinedData.reduce((acc, item) => {
   const existingItem = acc.find((el) => el.variantName === item.variantName);
 
@@ -34,6 +42,8 @@ const filterData = combinedData.reduce((acc, item) => {
   } else {
     // Voeg een nieuw item toe met de huidige variantName en datum
     acc.push({
+      dorp: dorpen[item.accomodationId],
+      skigebied: skigebieden[item.accomodationId],
       accomodationId: item.accomodationId,
       departurePricePersons: item.departurePricePersons,
       variantName: item.variantName,
@@ -46,30 +56,54 @@ const filterData = combinedData.reduce((acc, item) => {
   return acc;
 }, []);
 
-// console.log(filterData)
 
 
-// Compare accommodations
-const comparedAccommodations = [];
-data1.forEach(accommodation1 => {
-  filterData.forEach(accommodation2 => {
-    if (accommodation1.accomodationId === String(accommodation2.accomodationId)) {
-      // Extract the common information
-      const dorp = accommodation1.dorp
-      const skigebied = accommodation1.skigebied
-
-      // Add compared accommodation to the list
-      comparedAccommodations.push({
-        accommodationId: accommodation1.accomodationId,
-        skigebied,
-        dorp
-      });
-    }
-  });
-});
+// ---------------Test-------------------
 
 
-console.log(comparedAccommodations)
+const complexnamen = []
+const beds = []
+
+filterData.forEach(complexname => {
+  if (!complexnamen.includes(complexname.complex_name)) {
+    complexnamen.push(complexname.complex_name)
+  }
+  if (!beds.includes(complexname.numberOfBeds)) {
+    beds.push(complexname.numberOfBeds)
+  }
+})
+
+complexnamen.sort()
+beds.sort()
+
+
+function filterdata(filter, value){
+  console.log(filter, value)
+  return filterData.filter(a => a[filter] == value)
+}
+
+
+// // Compare accommodations
+// const comparedAccommodations = [];
+// data1.forEach(accommodation1 => {
+//   filterData.forEach(accommodation2 => {
+//     if (accommodation1.accomodationId === String(accommodation2.accomodationId)) {
+//       // Extract the common information
+//       const dorp = accommodation1.dorp
+//       const skigebied = accommodation1.skigebied
+
+//       // Add compared accommodation to the list
+//       comparedAccommodations.push({
+//         accommodationId: accommodation1.accomodationId,
+//         skigebied,
+//         dorp
+//       });
+//     }
+//   });
+// });
+
+
+// console.log(comparedAccommodations)
 
 // if (filterData.accomodationId === comparedAccommodations.accommodationId) { 
 //   dorp
@@ -110,7 +144,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
 app.get("/", async function (request, response) {
-  response.render("index", { filterData, data1, data2, data3 ,data4, comparedAccommodations });
+  let filter = request.query.filter
+  let filterValue = request.query.value
+  let result = filterdata(filter, filterValue)
+
+  response.render("index", {filterData: result.length > 0 ? result : filterData,  data1, data2, data3 ,data4, complexnamen });
 });
 
 app.listen(port, () => {
