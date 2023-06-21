@@ -46,7 +46,7 @@ const filterData = combinedData.reduce((acc, item) => {
   return acc;
 }, []);
 
-console.log(filterData)
+// console.log(filterData)
 
 
 // Compare accommodations
@@ -68,7 +68,30 @@ data1.forEach(accommodation1 => {
   });
 });
 
+
 console.log(comparedAccommodations)
+
+// if (filterData.accomodationId === comparedAccommodations.accommodationId) { 
+//   dorp
+//  } 
+
+
+// const matchingAccommodations = comparedAccommodations.filter((comparedAccommodation) => {
+//   return filterData.some((filterAccommodation) => {
+//     return filterAccommodation.accommodationId === comparedAccommodation.accomodationId ;
+//   });
+// });
+
+
+// const matchingDorps = matchingAccommodations.map((matchingAccommodation) => {
+//   const matchingFilterAccommodation = filterData.find((filterAccommodation) => {
+//     return filterAccommodation.accommodationId === matchingAccommodation.accomodationId;
+//   });
+//   return matchingFilterAccommodation.dorp;
+// });
+
+// console.log('Matching dorps:', matchingDorps);
+
 
 
 

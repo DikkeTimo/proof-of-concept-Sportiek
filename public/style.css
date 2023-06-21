@@ -54,14 +54,21 @@ nav {
   display: flex;
   align-items: center;
   background-color: var(--table-color);
-  margin-bottom: 1rem;
-  padding: 0.2rem;
+  border-radius: 0.6rem;
   height: 5rem;
+  width: 99%;
+  margin: 0 auto;
+  margin-bottom: 1rem;
+}
+
+.filter {
+  display: flex;
 }
 
 nav label {
   font-size: larger;
   color: #fff;
+  padding: 1rem;
 }
 
 .dropdown {
