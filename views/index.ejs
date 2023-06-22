@@ -48,8 +48,8 @@
           <thead>
             <tr>
               <th>Skigebied</th>
-              <th>Accommodatie</th>
               <th>Dorp</th>
+              <th>Accommodatie</th>
               <th>Kamertype</th>
             </tr>
           </thead>
@@ -57,8 +57,8 @@
             <% filterData.forEach(info => { %>
               <tr>
                   <td><%= info.skigebied %></td>
-                  <td><%= info.complex_name %></td>
                   <td><%= info.dorp %></td>
+                  <td><%= info.complex_name %></td>
                   <td><%= info.variantName %></td>
               </tr>
             <% }) %>
