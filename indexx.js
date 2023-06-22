@@ -8,7 +8,8 @@ const port = process.env.PORT || 4242;
 
 // Urls from .env file
 const apiKey = process.env.API_URL_INFOMARTION;
-const sportiekfeedone = process.env.API_URL_ACCOMMODATIES1;
+const sportiekfeedone = process.env.API_URL_ACCOMMODATIES0;
+const
 const sportiekfeedtwo= process.env.API_URL_ACCOMMODATIES2
 const sportiekfeedthree= process.env.API_URL_ACCOMMODATIES3
 
